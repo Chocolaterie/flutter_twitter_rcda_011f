@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tp_twitter/footer.dart';
 import 'package:tp_twitter/header.dart';
+import 'package:tp_twitter/tweet-content.dart';
 
 void main() {
   runApp(TPTwitterApp());
@@ -28,40 +29,7 @@ class HomePage extends StatelessWidget {
         children: [
           HeaderComponent(),
           // La carte tweet
-          Expanded(child:
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(width:180, child: Image.asset("images/profil_placeholder.jpg")),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10),
-                          child: Text("LaCrevete@chocolatine.com"),
-                        ),
-                        Text("Lorem ipsuqsdk qsjdln sqjndj qsjdjq sjdqn")
-                      ],),
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                    Text("Répondre"),
-                    Text("Retweet"),
-                    Text("Favoris"),
-                  ],),
-                )
-              ],
-          )),
+          Expanded(child: TwitterContent()),
           FooterComponent(),
         ],
       ),

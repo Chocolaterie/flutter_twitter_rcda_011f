@@ -8,9 +8,9 @@ class HeaderComponent extends StatelessWidget{
     Padding(
       padding: const EdgeInsets.all(25),
       child: Row(children: [
-        Expanded(child: Text("Nouveau", style: TextStyle(color: Colors.white),)),
+        Expanded(child: IconButton(onPressed: () {}, icon: Image.asset("images/pencil.png"),)),
         Expanded(child: Text("Accueil", textAlign: TextAlign.center, style: TextStyle(color: Colors.white))),
-        Expanded(child: Text("Rechercher", textAlign: TextAlign.right, style: TextStyle(color: Colors.white))),
+        Expanded(child: IconButton(onPressed: () {}, icon: Image.asset("images/search.png"),)),
       ],),
     ),);
   }
