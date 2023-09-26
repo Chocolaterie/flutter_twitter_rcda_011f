@@ -27,7 +27,29 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           HeaderComponent(),
-          Expanded(child: Container()),
+          // La carte tweet
+          Expanded(child:
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text("LaCrevete@chocolatine.com"),
+                  Text("Lorem ipsuqsdk qsjdln sqjndj qsjdjq sjdqn")
+                ],),
+                Padding(
+                  padding: const EdgeInsets.all(25),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                    Text("Répondre"),
+                    Text("Retweet"),
+                    Text("Favoris"),
+                  ],),
+                )
+              ],
+          )),
           FooterComponent(),
         ],
       ),
