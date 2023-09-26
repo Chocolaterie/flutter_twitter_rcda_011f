@@ -32,12 +32,18 @@ class HomePage extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
+                Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                  Text("LaCrevete@chocolatine.com"),
-                  Text("Lorem ipsuqsdk qsjdln sqjndj qsjdjq sjdqn")
-                ],),
+                    SizedBox(width:180, child: Image.network("https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_23/3480975/210607-doge-meme-2x1-se-431p.jpg")),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Text("LaCrevete@chocolatine.com"),
+                      Text("Lorem ipsuqsdk qsjdln sqjndj qsjdjq sjdqn")
+                    ],),
+                  ],
+                ),
                 Padding(
                   padding: const EdgeInsets.all(25),
                   child: Row(
