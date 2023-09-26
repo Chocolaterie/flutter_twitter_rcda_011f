@@ -28,7 +28,6 @@ class HomePage extends StatelessWidget {
         children: [
           HeaderComponent(),
           Expanded(child: Container()),
-          // Footer
           FooterComponent(),
         ],
       ),
