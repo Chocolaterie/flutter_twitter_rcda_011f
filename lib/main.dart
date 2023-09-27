@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tp_twitter/footer.dart';
 import 'package:tp_twitter/header.dart';
+import 'package:tp_twitter/login-page.dart';
 import 'package:tp_twitter/tweet-content.dart';
 
 import 'login-form.dart';
@@ -15,25 +16,26 @@ class TPTwitterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "TP Twitter",
-      home: HomePage()
+      routes: {
+        "/" : (context) => LoginPage(),
+        "/tweet-list-page" : (context) => TwitterPage(),
+      },
     );
   }
 }
 
 // La page
-class HomePage extends StatelessWidget {
+class TwitterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Page d'Accueil"),),
+      appBar: AppBar(title: Text("Page twitter"),),
       body: Column(
         children: [
           HeaderComponent(),
           Expanded(child: Column(
             children: [
-              // Formulaire
-              LoginForm(),
               // La carte tweet
               TwitterContent(),
             ],

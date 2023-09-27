@@ -40,12 +40,11 @@ class LoginForm extends StatelessWidget {
     return null;
   }
 
-  void onSubmit(){
+  void onSubmit(BuildContext context){
     // Enclancher la validation du formulaire
     if (formKey.currentState!.validate()){
-      print("Formulaire valide");
+      Navigator.pushNamed(context, "/tweet-list-page");
     }
-
   }
 
   @override
@@ -70,7 +69,7 @@ class LoginForm extends StatelessWidget {
             Text("Mémoriser mes informations")
           ],),
           // LE bouton
-          SizedBox( width: double.infinity, child: ElevatedButton(onPressed: onSubmit, child: Padding(
+          SizedBox( width: double.infinity, child: ElevatedButton(onPressed: () { onSubmit(context); }, child: Padding(
             padding: const EdgeInsets.all(10),
             child: Text("Connexion"),
           )))
