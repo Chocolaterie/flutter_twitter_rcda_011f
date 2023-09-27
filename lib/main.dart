@@ -30,11 +30,11 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           HeaderComponent(),
-          // La carte tweet
           Expanded(child: Column(
             children: [
               // Formulaire
               LoginForm(),
+              // La carte tweet
               TwitterContent(),
             ],
           )),
