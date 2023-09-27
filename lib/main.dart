@@ -3,6 +3,8 @@ import 'package:tp_twitter/footer.dart';
 import 'package:tp_twitter/header.dart';
 import 'package:tp_twitter/tweet-content.dart';
 
+import 'login-form.dart';
+
 void main() {
   runApp(TPTwitterApp());
 }
@@ -29,7 +31,13 @@ class HomePage extends StatelessWidget {
         children: [
           HeaderComponent(),
           // La carte tweet
-          Expanded(child: TwitterContent()),
+          Expanded(child: Column(
+            children: [
+              // Formulaire
+              LoginForm(),
+              TwitterContent(),
+            ],
+          )),
           FooterComponent(),
         ],
       ),
