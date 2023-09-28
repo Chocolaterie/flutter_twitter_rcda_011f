@@ -35,12 +35,10 @@ class TwitterPage extends StatelessWidget {
       body: Column(
         children: [
           HeaderComponent(),
-          Expanded(child: Column(
-            children: [
+          Expanded(child:
               // La carte tweet
               TwitterContent(),
-            ],
-          )),
+          ),
           FooterComponent(),
         ],
       ),
