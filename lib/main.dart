@@ -16,6 +16,7 @@ class TPTwitterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "TP Twitter",
+      initialRoute: '/tweet-list-page',
       routes: {
         "/" : (context) => LoginPage(),
         "/tweet-list-page" : (context) => TwitterPage(),
